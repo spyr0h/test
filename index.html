@@ -14,32 +14,53 @@
 
 body, html {
   height: 100%;
-  line-height: 1.8;
-}
-
-#global-div {
-  width: 100% !important;
-}
-
-.head {
-  font-family: 'Klee One', cursive;
 }
 
 body {
-    padding-top: 100px !important;
+  padding-top: 95px !important;
+}
+
+#navbar {
+  background:  rgba(9, 12, 16, 1) !important;
+  min-height: 95px !important;
+  backdrop-filter: blur(4px) !important;
+  display: flex;
+  flex-direction: row;
+}
+
+#logo-wrapper {
+  flex: 4;
+  display: flex;
+  align-items: center;
 }
 
 #logo {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  height: 5.5vh;
+  margin-left: 5vw;
+  opacity: 0.7;
 }
 
-#souligne{
-    width: 100%;
+#socials {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.social-logo {
+  height: 2.1vh;
+  margin-right: 5vw;
+  opacity: 0.7;
+
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+.social-logo:active {
+  opacity: 1;
+}
+
+.social-logo:hover {
+  opacity: 1;
 }
 
 /* Full height image header */
@@ -48,16 +69,6 @@ body {
   background-size: cover;
   background-image: url("https://i.ibb.co/vY37ygR/sultana.jpg");
   min-height: 80%;
-}
-
-.w3-bar {
-  padding: 16px;
-  background-color: #090c10 !important;
-  color: white !important;
-  font-size: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .grostitre {
@@ -133,36 +144,16 @@ body {
   outline-offset: 2px;
 }
 
-#global-div {
-    padding: 48px 30px 48px 48px;
-}
-
 @media (min-width: 768px) {
   .button-40 {
     padding: .75rem 1.5rem;
-  }
-  #souligne {
-    display: none;
-  }
-  #logo {
-    margin: 0;
-  }
-  #myNavbar{
-    justify-content: left;
-  }
-  #logo {
-    align-items: self-start !important;
-    padding-left: 40px;
-  }
-  body {
-    padding-top: 20px !important;
   }
   .shad {
     font-size: 57px !important;
     margin-bottom: 10px !important;
   }
   .button-40-declinate {
-    
+
     width: 13% !important;
     margin-right: 2% !important;
     font-size: 15px !important;
@@ -173,58 +164,182 @@ body {
     text-align: left !important;
     display: block !important;
     width: 100vw !important;
+  }
 }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+#dots {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 </style>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <div id="logo">
-        <a class="w3-bar-item w3-button w3-wide head">La Sultane</a>
-        <img src="https://i.ibb.co/rs1HMCT/soulignation.png" id="souligne" />
+  <div class="w3-bar w3-white w3-card" id="navbar">
+    <div id="logo-wrapper">
+      <img src="https://i.ibb.co/D9Qbtqf/logo.png" id="logo">
     </div>
-    <!-- Right-sided navbar links 
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>-->
-    <!-- Hide right-floated links on small screens and replace them with a menu icon 
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-    -->
+    <div id="socials">
+      <img src="https://i.ibb.co/jwf4rbr/580b57fcd9996e24bc43c53e.png" class="social-logo" onclick="location.href='https://twitter.com/la_sultanee';">
+      <img src="https://i.ibb.co/27N4xvC/mym.png" class="social-logo" onclick="location.href='https://mym.fans/La_sultanee';">
+    </div>
   </div>
 </div>
 
-<!-- Sidebar on small screens when clicking the menu icon 
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
--->
+<!--<header class="bgimg-1 w3-display-container" id="home">
+</header>-->
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/rps1Vs8/1.png" style="width:100%">
+  </div>
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-left w3-text-white" id="global-div">
-    <!--<span class="w3-jumbo w3-hide-small shad">La domina la plus sensuelle et cruelle ..</span><br><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium shad">La domina la plus sensuelle et cruelle ..</span><br><br>-->
-    <button class="button-40 button-40-declinate" role="button" onclick="location.href='https://mym.fans/La_sultanee';">MYM</button>
-    <button class="button-40 button-40-declinate" role="button" onclick="location.href='https://twitter.com/la_sultanee';">TWITTER</button>
-  </div> 
-</header>
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/bQtsP20/2.png" style="width:100%">
+  </div>
 
-<!-- Promo Section - "We know design" -->
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/TTNWncT/3.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/rwsLvnj/4.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/ZdrfLCF/5.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/18zGJLm/6.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/3WF1Dcp/7.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/JKPFGg7/8.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/0h2rr7j/9.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/8702yYH/10.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/xCzCVxw/11.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/kKZ800j/12.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/QjPLC7y/13.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/4pdXhKd/14.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://i.ibb.co/7kgrzX6/15.png" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div style="text-align:center" id="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+    <span class="dot" onclick="currentSlide(12)"></span>
+    <span class="dot" onclick="currentSlide(13)"></span>
+    <span class="dot" onclick="currentSlide(14)"></span>
+    <span class="dot" onclick="currentSlide(15)"></span>
+  </div>
+</div>
+
+
 <div class="w3-container w3-light-grey" style="padding:100px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
@@ -241,39 +356,39 @@ body {
   </div>
 </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 bodoni">
+<footer class="w3-center w3-black w3-padding-64">
   <p>@La Sultane</p>
 </footer>
- 
-<script>
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-
-/*function scrollFunction() {
-    console.error("scroll");
-    var souligne = document.getElementById("souligne");
-    souligne.style.display = "none";
-    var navbar = document.getElementById("myNavbar");
-    navbar.style.justifyContent = "left";
-}
-
-window.onscroll = scrollFunction;*/
-</script>
-
 </body>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(() => currentSlide(slideIndex + 1 % 15), 4000);
+  }
+</script>
 </html>
