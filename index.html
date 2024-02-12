@@ -349,7 +349,7 @@ body {
   height: 8px;
   width: 8px;
   margin: 0 2px;
-  background-color: rgba(9, 12, 16, 0.8);
+  background-color: rgba(9, 12, 16, 0.6);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -607,7 +607,7 @@ body {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    //setTimeout(() => currentSlide(slideIndex + 1 % 15), 4000);
+    setTimeout(() => currentSlide(slideIndex + 1 % 15), 4000);
   }
 </script>
 </html>
