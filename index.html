@@ -196,7 +196,7 @@ body {
     font-family: "weathersunday";
     font-weight: 500;
     font-size: 40px !important;
-    line-height: 40px !important;
+    line-height: 50px !important;
     text-align: center !important;
     margin: 0 !important;
     background-image: 
@@ -207,7 +207,9 @@ body {
 }
 
 #content {
-  margin-top: 70vh;
+  margin-top: 69vh;
+  z-index: 15;
+  position: relative;
 }
 
 #banner {
@@ -284,32 +286,28 @@ body {
     margin-right: 2% !important;
     font-size: 15px !important;
   }
-
-  .subtitle {
-    font-size: 70px !important;
-    text-align: left !important;
-    display: block !important;
-    width: 100vw !important;
-  }
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
   position: fixed;
   margin: auto;
   height: 70vh;
-  z-index: -3;
+  width: 100%;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
   height: 100%;
+  min-width: 100%;
 }
 
 .mySlides-img {
   height: 100%;
+  width:100%; 
+  background-size: cover;
+  background-position: center;
 }
 
 /* Next & previous buttons */
@@ -320,7 +318,7 @@ body {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: rgba(9, 12, 16, 0.8);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -336,7 +334,7 @@ body {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(9, 12, 16, 0.3);
 }
 
 #dots {
@@ -351,7 +349,7 @@ body {
   height: 8px;
   width: 8px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: rgba(9, 12, 16, 0.8);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -389,67 +387,67 @@ body {
 
 <div class="slideshow-container">
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/rps1Vs8/1.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/rps1Vs8/1.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/bQtsP20/2.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/bQtsP20/2.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/TTNWncT/3.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/TTNWncT/3.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/rwsLvnj/4.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/rwsLvnj/4.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/ZdrfLCF/5.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/ZdrfLCF/5.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/18zGJLm/6.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/18zGJLm/6.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/3WF1Dcp/7.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/3WF1Dcp/7.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/JKPFGg7/8.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/JKPFGg7/8.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/0h2rr7j/9.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/0h2rr7j/9.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/8702yYH/10.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/8702yYH/10.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/xCzCVxw/11.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/xCzCVxw/11.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/kKZ800j/12.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/kKZ800j/12.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/QjPLC7y/13.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/QjPLC7y/13.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/4pdXhKd/14.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/4pdXhKd/14.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/7kgrzX6/15.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/7kgrzX6/15.png);"></div>
   </div>
 
   <div class="mySlides fade">
-    <img class="mySlides-img" src="https://i.ibb.co/7XpBgmP/16.png" style="width:100%">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/7XpBgmP/16.png);"></div>
   </div>
 
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -609,7 +607,7 @@ body {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    setTimeout(() => currentSlide(slideIndex + 1 % 15), 4000);
+    //setTimeout(() => currentSlide(slideIndex + 1 % 15), 4000);
   }
 </script>
 </html>
