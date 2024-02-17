@@ -42,6 +42,10 @@ body {
   justify-content: center;
 }
 
+.w3-top {
+  z-index: 1000 !important;
+}
+
 
 #navbar {
   background:  rgba(9, 12, 16, 1) !important;
@@ -95,6 +99,14 @@ body {
 }
 
 #mespratiques {
+  padding-top: 10vw;
+  padding-bottom: 16vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  background-color: #FFFFF7;
+}
+
+#presentation {
   padding-top: 10vw;
   padding-bottom: 16vw;
   padding-right: 5vw;
@@ -465,6 +477,10 @@ body {
     <div class="mySlides-img" style="background-image: url(https://i.ibb.co/CnZwpnP/19.png);"></div>
   </div>
 
+  <div class="mySlides fade">
+    <div class="mySlides-img" style="background-image: url(https://i.ibb.co/L5tw0tw/20.png);"></div>
+  </div>
+
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -488,13 +504,27 @@ body {
     <span class="dot" onclick="currentSlide(17)"></span>
     <span class="dot" onclick="currentSlide(18)"></span>
     <span class="dot" onclick="currentSlide(19)"></span>
+    <span class="dot" onclick="currentSlide(20)"></span>
   </div>
 </div>
-
 
 <div id="content">
     <div id="subtitle-wrapper">
       <span class="subtitle">Viens vite au pied pour prendre ta raclée !</span><br>
+    </div>
+    <div id="presentation">
+      <div class="titre">
+        <h3 class="grostitre">A propos</h3>
+        <h4 class="subgrostitre">de moi</h4>
+      </div>
+      <div>
+        <br><br>
+        <p>Explorez l'univers séduisant de la Sultane, une beauté envoûtante prête à réaliser vos fantasmes de soumission avec charme et autorité.</p>
+        <p>Plongez dans une expérience unique, où la séduction et la domination se rencontrent sous son regard captivant.</p><br>
+        <p>La Sultane est régulièrement <b>à Paris</b>, <b>à Bruxelles</b> et <b>au Luxembourg</b>.</p>
+        <p>Il est possible qu'elle se déplace avec une offrandede 50€ et la prise en charge des billets de train ou avion par le soumis.</p><br>
+        <p>Plus d'informations sur ses pratiques, ses liens de paiement ou bien comment la contacter plus bas.</p>
+      </div>  
     </div>
     <div id="mesliens">
       <div class="titre">
@@ -581,6 +611,16 @@ body {
         </div>
       </div>
       <div class="pratique">
+        <p class="pratique-title">Appartenance</p>
+        <div class="pratique-desc">
+          <div class="pratique-row">
+            <p class="pratique-name">appartenance</p>
+            <p class="pratique-name">contrat</p>
+            <p class="pratique-name-empty"></p>
+          </div>
+        </div>
+      </div>
+      <div class="pratique">
         <p class="pratique-title title-red">Je ne pratique pas</p>
         <div class="pratique-desc">
           <div class="pratique-row">
@@ -590,9 +630,6 @@ body {
           </div>
         </div>
       </div>
-    </div>
-    <div class="banner">
-      <img src="https://i.ibb.co/L0CsvBh/banner2.png" class="banner-img">
     </div>
 </div>
 
