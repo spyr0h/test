@@ -631,13 +631,16 @@ body {
         </div>
       </div>
     </div>
+    <div class="banner">
+      <img src="https://i.ibb.co/8DJ3Xgj/banner2.png"" class="banner-img">
+    </div>
 </div>
-
 <footer class="w3-center w3-black w3-padding-64" id="footer">
   <p>@La Sultane</p>
 </footer>
 </body>
 <script>
+  let timeout = 0;
   let slideIndex = 1;
   showSlides(slideIndex);
 
@@ -665,7 +668,8 @@ body {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    setTimeout(() => currentSlide(slideIndex + 1 % 15), 4000);
+    clearTimeout(timeout);
+    timeout = setTimeout(() => currentSlide(slideIndex + 1 % 15), 4000);
   }
 </script>
 </html>
