@@ -114,10 +114,6 @@ body {
   background-color: #F6F6F6;
 }
 
-#video {
-  padding-top: 5vw;
-}
-
 #presentation {
   padding-top: 10vw;
   padding-bottom: 16vw;
@@ -386,6 +382,21 @@ body {
   animation-duration: 1.5s;
 }
 
+#vids {
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+  justify-content: space-between;
+}
+
+#video {
+  width: 100%;
+  height: 40vh;
+  background-color: black;
+  padding-top: 0 !important;
+}
+
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
@@ -464,11 +475,6 @@ body {
     padding-left: 10vw !important;
   }
 
-  #video {
-    width: 40vw;
-    margin-left: 20vw;
-  }
-
   #reseau-buttons {
     padding-top: 2vw;
     padding-bottom: 2vw;
@@ -495,6 +501,18 @@ body {
     display: flex;
     gap: 30px;
     justify-content: space-between;
+  }
+
+  #vids {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #video {
+    width: 45%;
+    height: 22vw;
+    background-color: black;
   }
 }
 </style>
@@ -759,12 +777,17 @@ body {
     </div>
     <div id="vid" class="section-desktop">
       <div class="titre">
-        <h3 class="grostitre">Extrait</h3>
+        <h3 class="grostitre">Extraits</h3>
         <h4 class="subgrostitre">de séance</h4>
       </div>
-      <video id="video" width="100%" controls>
-          <source src="vid.mp4" type="video/mp4">
-      </video>
+      <div id="vids">
+        <video id="video" width="100%" controls>
+            <source src="vid.mp4" type="video/mp4">
+        </video>
+        <video id="video" width="100%" controls>
+          <source src="vid2.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
     <div class="banner">
       <img src="https://i.ibb.co/8DJ3Xgj/banner2.png"" class="banner-img">
